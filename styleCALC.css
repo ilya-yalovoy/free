@@ -1,0 +1,421 @@
+.select {
+    position: relative;
+}
+.cal__content {
+    position: relative;
+}
+
+.select select {
+    display: block;
+    min-width: 250px;
+    width: 100%; /* от ширины блока div */
+    padding: .75rem 2.5rem .75rem 1rem;/* отступы от текста до рамки */
+    background: #fff; /* убираем фон */
+    border: 1px solid #ccc; /* рамка */
+    border-radius: 3px;/* скругление полей формы */
+    -webkit-appearance: none;/* Chrome */
+    -moz-appearance: none;/* Firefox */
+    appearance: none;/* убираем дефолнтные стрелочки */
+    font-family: inherit;/* наследует от родителя */
+    font-size: 1rem;
+    color: #444;
+    
+}
+
+.select:after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: #000 transparent transparent transparent;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    z-index: 1;
+    margin-top: -3px;
+}
+
+.calc__form h5 {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 24px;
+    color: #39435B;
+    margin: 2px;
+    margin-bottom: 15px;
+}
+
+.language {
+    display: flex;
+}
+.language1 {
+    margin-right: 30px;
+}
+
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.cal__content {
+    display: flex;
+    justify-content: space-between;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 35px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider:before {
+    content: '1';
+    position: relative;
+    top: 100%;
+    color: #6E7C83;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;    
+}
+.slider::after{
+    content: '300';
+    position: relative;
+    top: 100%;
+    color: #6E7C83;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;    
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+}
+.slider-num {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    width: 100px;
+    font-family: Gotham;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #523F79;
+}
+
+input, select {
+    outline: none;
+    background: #fff;
+}
+input:focus,
+select:focus {
+    border: solid 2px #523F79;
+}
+
+.format__level,
+.subject__level {
+    display: flex;
+    justify-content: flex-end;
+}
+.subject__text img,
+.format__text img  {
+    padding-right: 20px;
+    height: 40px;    
+}
+
+.format__list,
+.subject__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subject {
+    margin-top: 20px;
+}
+
+.subject__item {
+    flex: 0 0 25%;
+}
+.format__item {
+    flex: 0 0 35%;
+}
+.format__item,
+.subject__item {
+    box-shadow: 0 0 5px #0005;
+    padding: 10px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.format__text,
+.subject__text,
+.procent__text {
+    display: flex;
+}
+
+.format__title h6,
+.procent__title h6 {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #39435B;
+    margin: 3px;
+}
+
+.format__text p,
+.procent__text p
+.subject__text p {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #39435B;
+}
+.calc__form {
+    flex: 0 0 70%;
+    padding: 20px;
+    background: #F2F5FA;
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px rgba(92, 107, 125, 0.27), inset 0px -2px 10px rgba(193, 184, 178, 0.5);
+}
+
+.calc__form>div {
+    margin-top: 50px;
+}
+
+.format__item:nth-child(1) {
+    border: 1px solid #523F79;
+}
+
+.subject__item:nth-child(1) {
+    border: 1px solid #523F79;
+}
+
+.calc__blanck {
+    flex: 0 0 25%;
+}
+.calc__prise {
+    width: 100%;
+    border: 1px solid #000;
+    padding: 30px;
+
+}
+
+.calc__prise-item,
+.calc__prise-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.calc__prise-item h5,
+.calc__prise-result h5 {
+    color: #0B1838;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0;
+    font-size: 15px;
+}
+
+.probel {
+    flex: 1 0 auto;
+  border-bottom: 3px dotted #000;
+  height: 1em;
+  margin: 0 .4em;
+}
+
+.calc__prise-item span {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    color: #0B1838;
+}
+
+.calc__navigation {
+    display: flex;
+    height: 50%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav__bar {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.circle1,
+.circle2 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #6FE8C8;
+    padding: 6px;
+}
+.circle11,
+.circle22 {
+    height: 100%;
+    width: 100%;
+    border-radius:50%;
+    border: 2px solid #6FE8C8;
+    background: #6FE8C8;
+}
+.circle22 {
+    background: none;
+}
+.line {
+    margin: 10px;
+    height: 2px;
+    width: 100px;
+    background: #6FE8C8;
+}
+.circle1::after,
+.circle2::after {
+    color: #6E7C83;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    position: relative;
+    top: 50%;
+    width: 150%;
+    text-align: center;
+}
+
+.circle1::after{
+    content: 'Шаг 1'
+}
+.circle2::after{
+    content: 'Шаг 2'
+}
+
+
+
+.range {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.range__item {
+    margin-bottom: 20px;
+    display: flex;
+    flex: 0 0 23%;
+    width: 100%;
+    background: #fff;
+}
+.range__img {
+    flex: 0 0 30%;
+}
+
+.range__img-photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 110px;
+    border-radius: 0 1em 1em 0;
+    color: #F2F5FA;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.range__list-grid {
+    flex: 0 0 65%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 30% 30%;
+    align-items: center;
+}
+.YES:before {
+    content: url('img/yes.png');
+    position: relative;
+    right: 3px;
+}
+
+
+.NO:before {
+    content: url('img/no.png');
+    position: relative;
+    right: 3px;
+}
+
+.checkbox {
+    color: #39435B;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+}
+
+.checkbox input {
+    color: #39435B;
+    padding: 2px;
+    font-size: 20px;
+}
+.procent__items {
+    display: flex;
+    justify-content: space-between;
+}
+.procent__item {
+    background:#fff;
+    padding: 3px;
+    flex: 0 0 30%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.procent__img {
+    display: flex;
+    align-items: center;
+}
+.procent__img img {
+    display: block;
+}
+.form1,
+.form2 {
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.form1 {
+    display: block;
+}
+
+
+.form2 {
+    display: none;
+}
+

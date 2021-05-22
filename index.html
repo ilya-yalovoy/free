@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПерВсеЯз</title>
+    <link rel="stylesheet" href="stylenull.css">
+    <link rel="stylesheet" href="styleMain.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleCALC.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="order2">
+            <div class="order2__title" style="color: #39435B; font-style: normal; font-weight: bold;font-size: 28px;">Оставьте свой номер</div>
+            <div class="order2__subtitle" style="color: #39435B;font-size: 21px;font-weight: 500;">и менеджер свяжется с Вами удобным для Вас способом</div>
+            <div class="messenger">
+                <a href="" class="mess2"><img src="img/telegram.png" alt=""></a>
+                <a href="" class="mess2"><img src="img/viber.png" alt=""></a>
+                <a href="" class="mess2"><img src="img/wat.png" alt=""></a>
+                <a href="" class="mess2"><img src="img/Call.png" alt=""></a>
+            </div>
+            <form action="#" style="display: flex; flex-direction: column;">
+                <div class="inputsOrder2" style="display: flex; justify-content: space-between; padding: 10px 0;">
+                    <input type="text" style="width: 49%;height: 50px;padding: 10px;" required placeholder="Введите имя">
+                    <input type="text" style="width: 49%;height: 50px;padding: 10px;" required placeholder="Введите номер/никнейм">
+                </div>
+                <textarea name="" id="" style="width: 100%;height: 100px;padding: 10px;" rows="5" placeholder="Оставьте комментарий"></textarea>
+                <p style="font-weight: 500;font-size: 22px;color: #39435B;">Добавьте файлы</p>
+                <p style="color: #39435B;font-weight: 300;font-size: 19px;">чтобы менеджер быстро рассчитал цену и сроки</p>
+                <label style="margin: 0 auto 0; text-align: center" for="myfile2" cursor="pointer"><img style="display: inline;" src="img/file2.png"  alt=""></>
+                <input type="file" class="my" id="myfile2" name="myfile" multiple="multiple"/>
+                <button style="display: block;" id="submit" class="but2 button">Заказать перевод</button>
+                <script>
+                    let a = document.getElementById('submit');
+                    let order = document.getElementsByClassName('order2')[0];
+                    a.addEventListener('click', function() {
+                        $('.order2').css('height', 'auto');
+                        $('.order2').css('padding', '60px');
+                    });
+                </script>
+            </form>
+        </div>
+        <div class="menu">
+            <div class="block1">
+                <div class="adress">
+                    <img src="img/point.png" alt="">
+                    <div class="adress__UA">
+                        <div class="adress__title">Главный офис в Украине:</div>
+                        <div class="adress__text">г. Одесса, пр. А. Глушка, 29, БЦ "Элемент”</div>
+                    </div>
+                    <div class="adress__RU">
+                        <div class="adress__title">Главный офис в РФ:</div>
+                        <div class="adress__text">г. Москва, Чермянский пр-д, 7, БЦ “На Широкой”</div>
+                    </div>
+                </div>
+                <button class="but2 button" id="order">Заказать перевод</button>
+                <script>
+                    let b = document.getElementById('order');
+                    let c = document.getElementsByClassName('order2')[0];
+                    a.addEventListener('click', function() {
+                        $('.order2').css('height', 'auto');
+                        $('.order2').css('padding', '60px');
+                    });
+                </script>
+                <div class="telephone">
+                    <div class="telephone__UA"><img src="img/UA.png" alt="">+ 38 044 537-02-22</div>
+                    <div class="telephone__RU"><img src="img/RU.png" alt="">+ 7 (499) 350-06-40</div>
+                </div>
+                <div class="messenger">
+                    <a href="" class="mess"><img src="img/telegram.png" alt=""></a>
+                    <a href="" class="mess"><img src="img/viber.png" alt=""></a>
+                    <a href="" class="mess"><img src="img/wat.png" alt=""></a>
+                </div>
+            </div>
+            <div class="block2">
+                <div class="logo">
+                    <div class="logo-img">
+                        <img class="logo-img" src="img/Logo.png" alt="">
+                    </div>
+                    <div class="logo-text">
+                        <div class="logo-t1">Переводческие услуги </div>
+                        <div class="logo-t2">для всего ближнего зарубежья</div>
+                    </div>
+                </div>
+                <div class="menu-nav">
+                    <ul class="menu-nav__list">
+                        <li><a href="#" class="list">Главная</a></li>
+                        <li><a href="#calc" class="list">Расчет стоимости</a></li>
+                        <li><a href="#" class="list">О компании</a></li>
+                        <li><a href="#" class="list">Услуги</a></li>
+                        <li><a href="#" class="list">Акции</a></li>
+                        <li><a href="#" class="list">Контакты</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            
+        </div>
+        <div class="header">
+            <div class="header__content">
+                <h1>Бюро переводов ПерВсеЯз</h1>
+                <div class="header__text">Переведем документы любой тематики с учетом специфической терминологии и устойчивых фраз</div>
+                <a href="#cal"><button class="but1" >Расчитать стоимость самостоятельно</button></a>
+            </div>
+            <div class="header__list">
+                <div class="header__item">
+                    <img src="img/header1.png" alt="" class="header__item-img">
+                    <div class="header__item-text">Среднее время перевода - <b>3 часа</b></div>
+                </div>
+                <div class="header__item">
+                    <img src="img/header2.png" alt="" class="header__item-img">
+                    <div class="header__item-text">Цены на <b>10%</b> ниже рынка</div>
+                </div>
+                <div class="header__item">
+                    <img src="img/header3.png" alt="" class="header__item-img">
+                    <div class="header__item-text"><b>108</b> языков в работе</div>
+                </div>
+                <div class="header__item">
+                    <img src="img/header4.png" alt="" class="header__item-img">
+                    <div class="header__item-text">Более <b>310</b> переводчиков, из которых <b>273</b> - носители языка</div>
+                </div>
+                <div class="header__item">
+                    <img src="img/header5.png" alt="" class="header__item-img">
+                    <div class="header__item-text">Соответствуем международным стандартам качества <b>ISO 17100: 2015</b></div>
+                </div>
+                <div class="header__item">
+                    <img src="img/header6.png" alt="" class="header__item-img">
+                    <div class="header__item-text"><b>12</b> лет на рынке</div>
+                </div>
+            </div>
+        </div>
+        <div id="cal" class="cal">
+            <h1>Рассчитайте стоимость и сроки перевода без менеджера</h1>
+            <p class="header__subtitle subtitle">Заполните необходимые поля и узнайте цену за 2 простых шага</p>
+            <div class="cal__content">
+                <form class="calc__form form1">
+                    <div class="language">
+                        <div class="language1">
+                            <h5>Язык оригинала</h5>
+                            <div class="select">
+                                <select id="language1">
+                                    
+                                </select>
+                            </div>
+                            
+                        </div>
+                        <div class="langusge2">
+                            <div class="language1">
+                                <h5>Язык перевода</h5>
+                                <div class="select">
+                                    <select id="language2">
+                                        
+                                    </select>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pages">
+                        <h5>Количество страниц</h5>
+                        <div class="inputs">
+                            <input type="range" min="1" max="300" value="1" class="slider" id="myRange">
+                            <input type="text" value="1" class="slider-num" id="slider-num" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="subject">
+                        <h5>Тематика</h5>
+                        <div class="subject__list">
+                            <div class="subject__item">
+                                <div class="subject__level"><img src="img/Stars1.png" alt=""></div>
+                                <div class="subject__text">
+                                    <img src="img/Subject1.png" alt="">
+                                    <p>Популярная <br> (без узкой терминологии)</p>
+                                </div>
+                            </div>
+                            <div class="subject__item">
+                                <div class="subject__level"><img src="img/Stars2.png" alt=""></div>
+                                <div class="subject__text">
+                                    <img src="img/Subject2.png" alt="">
+                                    <p>Экономическая, юридическая, сайты</p>
+                                </div>                        </div>
+                            <div class="subject__item">
+                                <div class="subject__level"><img src="img/Stars3.png" alt=""></div>
+                                <div class="subject__text">
+                                    <img src="img/Subject3.png" alt="">
+                                    <p>Техническая, медицинская, нефтегазовая, художественная</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="format">
+                        <h5>Формат текста, который вы отправите на перевод</h5>
+                        <div class="format__list">
+                            <div class="format__item">
+                                <div class="format__level"><img src="img/Stars1.png" alt=""></div>
+                                <div class="format__text">
+                                    <img src="img/Subject1.png" alt="">
+                                    <div class="format__title">
+                                        <h6>Текстовый</h6>
+                                        <p>doc, txt, распознаваемый pdf</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="format__item">
+                                <div class="format__level"><img src="img/Stars2.png" alt=""></div>
+                                <div class="format__text">
+                                    <img src="img/Subject2.png" alt="">
+                                    <div class="format__title">
+                                        <h6>Фото</h6>
+                                        <p>jpg, jpеg, png, нераспознаваемый pdf</p>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form class="calc__form form2">
+                    <h5>Выберите пакет</h5>
+                    <div class="range">
+                        <div class="range__item" id="rang1">
+                            <div class="range__img" >
+                                <div id="rang1IMG" class="range__img-photo" style="width: 90%; background: linear-gradient(270deg, #523F79 0%, #807BE4 100%);">
+                                    <img src="img/Star 1.png" alt="">
+                                    <p id="rang1TEXT" style="background: rgba(82, 63, 121, 1); padding: 3px; margin-top: 3px;">Базовый</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="range__list-grid">
+                                <p  class="YES">Персональный менеджер</p>
+                                <p class="NO">Переводчик-специалист</p>
+                                <p  class="YES">Корректор</p>
+                                <p class="NO">Редактор</p>
+                                <p  class="YES">Консультация с носителем</p>
+                                <p class="NO">Приоритетное обслуживание</p>
+                            </div>
+                        </div>
+                        <div class="range__item" id="rang2">
+                            <div class="range__img">
+                                <div id="rang2IMG" class="range__img-photo" style="background: url('img/stal.jpg') 0 0/100% 100%;">
+                                    <span style="display: flex; flex-direction: row;"><img src="img/StarFiolet.png" alt="">  <img src="img/StarFiolet.png" alt=""></span>
+                                    <p id="rang2TEXT" style="background: rgba(82, 63, 121, 0.7); padding: 3px; margin-top: 3px;">Экспертный</p>
+                                </div>
+                                
+                            </div>
+                            <div class="range__list-grid">
+                                <p class="YES">Персональный менеджер</p>
+                                <p class="YES">Переводчик-специалист</p>
+                                <p class="YES">Корректор</p>
+                                <p class="YES">Редактор</p>
+                                <p class="YES">Консультация с носителем</p>
+                                <p class="NO">Приоритетное обслуживание</p>
+                            </div>
+                        </div>
+                        <div class="range__item" id="rang3">
+                            <div class="range__img">
+                                <div id="rang3IMG" class="range__img-photo" style="background: url('img/zoloto.jpg') 0 0/100% 100%; ">
+                                    <p style="display: flex; flex-direction: row;"><img src="img/StarFiolet.png" alt="">  <img src="img/StarFiolet.png" alt="">  <img src="img/StarFiolet.png" alt=""></p>
+                                    <p id="rang3TEXT" style="background: rgba(82, 63, 121, 0.7); padding: 3px; margin-top: 3px;">Премиальный</p>
+                                </div>
+                                
+                            </div>
+                            <div class="range__list-grid">
+                                <p class="YES">Персональный менеджер</p>
+                                <p  class="YES" style="color:rgba(217, 174, 44, 1)">Переводчик-специалист</p>
+                                <p class="YES">Корректор</p>
+                                <p class="YES" style="color:rgba(217, 174, 44, 1)">Редактор</p>
+                                <p class="YES" >Консультация с носителем</p>
+                                <p class="YES" style="color:rgba(217, 174, 44, 1)">Приоритетное обслуживание</p>
+                            </div>
+                        </div>
+                        <div class="procent">
+                            <h5>Скидки %</h5>
+                            <p class="checkbox"><input checked type="checkbox" id="economy1">Под скидку не подхожу</p>
+                            <div class="procent__items">
+                                <div class="procent__item" id="economy2">
+                                    
+                                    <div class="procent__text">
+                                        <div class="procent__img"><img src="img/Coin1.png" alt=""></div>
+                                        <div class="procent__title">
+                                            <h6 style="font-size: 28px;color: #E46161;">-10%</h6>
+                                            <p>Первый заказ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="procent__item" id="economy3">
+                                    <div class="procent__text">
+                                        <div class="procent__img"><img src="img/Coin2.png" alt=""></div>
+                                        <div class="procent__title">
+                                            <h6 style="font-size: 28px;color: #E46161;">-12%</h6>
+                                            <p>Более 10 страниц в одном заказе</p>
+                                        </div>
+                                    </div>  
+                                </div>
+                                <div class="procent__item" id="economy4">
+                                    <div class="procent__text">
+                                        <div class="procent__img"><img src="img/Coin3.png" alt=""></div>
+                                        <div class="procent__title">
+                                            <h6 style="font-size: 28px;color: #E46161;">-15%</h6>
+                                            <p>Постоянный клиент (от 100 страниц)</p>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="calc__blanck">
+                    <div class="calc__prise">
+                        <div class="calc__prise-item">
+                            <h5>Цена:</h5>
+                            <div class="probel"></div>
+                            <h5><span id="cost">50 600</span>RUB</h5>
+                        </div>
+                        <div class="calc__prise-item">
+                            <h5>Срок:</h5>
+                            <div class="probel"></div>
+                            <h5><span id="day">54</span>часов</h5>
+                        </div>
+                        <div class="calc__prise-item">
+                            <h5>Скидка:</h5>
+                            <div class="probel"></div>
+                            <h5><span id="economy">0</span>%</h5>
+                        </div>
+                        <div style="margin-top: 20px; " class="calc__prise-result">
+                            <h5 style="font-weight: bold;">Итого:</h5>
+                            <h5 id="sum" style="padding: 3px 7px; background: #F2F5FA;"><span style="color: #807BE4; font-size: 25px;">0</span>RUB</h5>
+                        </div>
+                    </div>
+                    <button style="width: 100%; margin-top: 20px;" class="but1">Заказать перевод</button>
+                    <div  class="calc__navigation">
+                        <div class="nav__button">
+                            <button class="but2 button calc-prev" id="calc-button-prev" style="width: 50px;height: 50px;padding: 5px;"><img style="transform: rotate(180deg);" src="img/button-calc.png" alt=""></button>
+                            <button class="but2 button calc-next" id="calc-button-next" style="width: 50px;height: 50px;padding: 5px;"><img src="img/button-calc.png" alt=""></button>
+                        </div>
+                        <div class="nav__bar">
+                            <div class="circle1"><div class="circle11"></div></div>
+                            <div class="line" id="line"></div>
+                            <div class="circle2"><div class="circle22"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="features">
+            <div class="features__title">
+                <h2>Перевод выполнит <span>переводчик с узкой специализацией</span></h2>
+                <p class="subtitle">с соблюдением Ваших стандартов, терминов и стилистики</p>
+            </div>
+            <div class="features__content">
+                <div class="features__list">
+                    <div class="features__item">
+                        <img src="img/feature1.png" alt="" class="features__item-img">
+                        <div class="features__item-content">
+                            <h6>Гарантия возврата</h6>
+                            <p>Возместим 100% от уплаченной стоимости заказа, если допустим объективные ошибки в переводе </p>
+                        </div>
+                    </div>
+                    <div class="features__item">
+                        <img src="img/feature2.png" alt="" class="features__item-img">
+                        <div class="features__item-content">
+                            <h6>Переводчик-эксперт</h6>
+                            <p>Переводчики имеют 2-ое профильное образование или перевод будет дополнительно проверяться отраслевым специалистом</p>
+                        </div>
+                    </div>
+                    <div class="features__item">
+                        <img src="img/feature3.png" alt="" class="features__item-img">
+                        <div class="features__item-content">
+                            <h6>Гарантия точной цены</h6>
+                            <p>Стоимость перевода в ходе работы не меняется - остается такой, как Вам сообщили в самом начале</p>
+                        </div>
+                    </div>
+                    <div class="features__item">
+                        <img src="img/feature4.png" alt="" class="features__item-img">
+                        <div class="features__item-content">
+                            <h6>Соблюдаем сроки</h6>
+                            <p>До оплаты менеджер вам указывает четкий срок перевода, который обязательно будет соблюден. В среднем срок перевода день в день, реже - на следующий день.</p>
+                        </div>
+                    </div>
+                    <div class="features__item">
+                        <img src="img/feature5.png" alt="" class="features__item-img">
+                        <div class="features__item-content">
+                            <h6>Гарантия качества</h6>
+                            <p>Перевод соответствует ГОСТ 15038, ISO 17100:2015 и ISO 9001:2008 </p>
+                        </div>
+                    </div>
+                    <div class="features__item">
+                        <img src="img/feature6.png" alt="" class="features__item-img">
+                        <div class="features__item-content">
+                            <h6>Удаляем недочеты в тот же день</h6>
+                            <p>Все выявленные недочеты устраняем сразу после обнаружения</p>
+                        </div>
+                    </div>
+                    <div class="features__item">
+                        <img src="img/feature7.png" alt="" class="features__item-img">
+                        <div class="features__item-content">
+                            <h6>Автоматизация переводов</h6>
+                            <p>За счет технологии переводческой памяти CAT tools сокращаются сроки и цена на перевод больших документов с повторяющимися формулировками и предложениями.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="director">
+            <div class="directory__title">
+                <h2><span>Качественный перевод</span> обеспечу лично</h2>
+                <p class="subtitle">Моя компания работает уже 12 лет.</p>
+            </div>
+            <div class="director__content">
+                <img src="img/director.png" alt="">
+                <div class="director__text">
+                    <div class="director__mess" >Сейчас на меня работает более 310 переводчиков по всему миру, а все начиналось с 1 человека - меня. В начале пути я самостоятельно переводил документы, вел переговоры с заказчиками, делал сайт, занимался административными вопросами. Теперь у меня огромная команда, которая за все это время выполнила более 30000 переводов. Позвонив на наши номера, трубку возьмет один из менеджеров, но в случае необходимости вы можете обратиться лично ко мне по любому поводу - просто попросите соединить со мной, Александром Матвеевым, Генеральным директором.</div>
+                    <div class="director__list-but">
+                        <button class="but2 button"><img src="img/phone.png" alt="">+ 38 044 537-02-22</button>
+                        <button class="but2 button"><img src="img/phone.png" alt="">+ 7 (499) 350-06-40</button>
+                    </div>
+                </div>
+                <div class="name">Александр Матвеев</div>
+                <div class="work">Генеральный директор</div>
+            </div>
+        </div>
+        <div class="staff">
+            <div class="directory__title">
+                <h2>Наши <span>лучшие переводчики</span></h2>
+                <p class="subtitle">Мы редко видимся, находимся в разных точках планеты, но это не мешает нам быть командой</p>
+            </div>
+            <div class="staff__grid">
+                <div class="staff__item">
+                    <div class="staff__img">
+                        <div class="staff__point">
+                            <img src="img/staff-point1.png" alt="" class="staff__point-img">
+                            <p class="staff__point-text">США</p>
+                            
+                        </div>
+                    </div>
+                    <div class="staff__img">
+                        <img src="img/staff1.png" alt="" class="staff__photo">
+                        <div class="staff__name">Abigail Wilson</div>
+                    </div>
+                    <div class="staff__content">
+                        <h6>Языки:</h6>
+                        <p>английский, испанский, французский</p>
+                        <h6>Специализация перводов:</h6>
+                        <p>медицина, техническое оборудование</p>
+                        <h6>Опыт работы:</h6>
+                        <p>13 лет</p>
+                    </div>
+                </div>
+                <div class="staff__item">
+                    <div class="staff__img">
+                        <div class="staff__point">
+                            <img src="img/staff-point2.png" alt="" class="staff__point-img">
+                            <p class="staff__point-text">Индия</p>
+                            
+                        </div>
+                    </div>
+                    <div class="staff__img">
+                        <img src="img/staff2.png" alt="" class="staff__photo">
+                        <div class="staff__name">Lakshit Tushar</div>
+                    </div>
+                    <div class="staff__content">
+                        <h6>Языки:</h6>
+                        <p>индийский, английский</p>
+                        <h6>Специализация перводов:</h6>
+                        <p>биология, физика, химия</p>
+                        <h6>Опыт работы:</h6>
+                        <p>6 лет</p>
+                    </div>
+                </div>
+                <div class="staff__item">
+                    <div class="staff__img">
+                        <div class="staff__point">
+                            <img src="img/staff-point3.png" alt="" class="staff__point-img">
+                            <p class="staff__point-text">Германия</p>
+                            
+                        </div>
+                    </div>
+                    <div class="staff__img">
+                        <img src="img/staff3.png" alt="" class="staff__photo">
+                        <div class="staff__name">Ottolia Becker</div>
+                    </div>
+                    <div class="staff__content">
+                        <h6>Языки:</h6>
+                        <p>немецкий, турецкий</p>
+                        <h6>Специализация перводов:</h6>
+                        <p>архитектура и дизайн</p>
+                        <h6>Опыт работы:</h6>
+                        <p>9 лет</p>
+                    </div>
+                </div>
+                <div class="staff__item">
+                    <div class="staff__img">
+                        <div class="staff__point">
+                            <img src="img/staff-point4.png" alt="" class="staff__point-img">
+                            <p class="staff__point-text">Финляндия</p>
+                            
+                        </div>
+                    </div>
+                    <div class="staff__img">
+                        <img src="img/staff4.png" alt="" class="staff__photo">
+                        <div class="staff__name">Pietari Järvinen</div>
+                    </div>
+                    <div class="staff__content">
+                        <h6>Языки:</h6>
+                        <p>английский, испанский, французский</p>
+                        <h6>Специализация перводов:</h6>
+                        <p>финский, английский, русский</p>
+                        <h6>Опыт работы:</h6>
+                        <p>7 лет</p>
+                    </div>
+                </div>
+                <div class="staff__item">
+                    <div class="staff__img">
+                        <div class="staff__point">
+                            <img src="img/staff-point5.png" alt="" class="staff__point-img">
+                            <p class="staff__point-text">Иран</p>
+                            
+                        </div>
+                    </div>
+                    <div class="staff__img">
+                        <img src="img/staff5.png" alt="" class="staff__photo">
+                        <div class="staff__name">Zaib Jinnah</div>
+                    </div>
+                    <div class="staff__content">
+                        <h6>Языки:</h6>
+                        <p>персидский, арабский, английский</p>
+                        <h6>Специализация перводов:</h6>
+                        <p>туризм, экономика, география</p>
+                        <h6>Опыт работы:</h6>
+                        <p>10 лет</p>
+                    </div>
+                </div>
+                <div class="staff__item">
+                    <div class="staff__img">
+                        <div class="staff__point">
+                            <img src="img/staff-point6.png" alt="" class="staff__point-img">
+                            <p class="staff__point-text">Китай</p>
+                            
+                        </div>
+                    </div>
+                    <div class="staff__img">
+                        <img src="img/staff6.png" alt="" class="staff__photo">
+                        <div class="staff__name">Chen Desheng</div>
+                    </div>
+                    <div class="staff__content">
+                        <h6>Языки:</h6>
+                        <p>английский, испанский, французский</p>
+                        <h6>Специализация перводов:</h6>
+                        <p>китайский, английский</p>
+                        <h6>Опыт работы:</h6>
+                        <p>8 лет</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="development">
+            <div class="directory__title">
+                <h2>ПерВсеЯз <span>развивается ежедневно</span></h2>
+            </div>
+            <div class="development__grid">
+                <div class="development__item">
+                    <img src="img/development1.png" alt="">
+                    <div class="development__content">
+                        <h6>47</h6>
+                        <div class="subtitle">офиса по всему ближнему зарубежью</div>
+                    </div>
+                </div>
+                <div class="development__item">
+                    <img src="img/development2.png" alt="">
+                    <div class="development__content">
+                        <h6>310</h6>
+                        <div class="subtitle">переводчиков</div>
+                    </div>
+                </div>
+                <div class="development__item">
+                    <img src="img/development3.png" alt="">
+                    <div class="development__content">
+                        <h6>1.7%</h6>
+                        <div class="subtitle">запросов на возврат</div>
+                    </div>
+                </div>
+                <div class="development__item">
+                    <img src="img/development4.png" alt="">
+                    <div class="development__content">
+                        <h6>39%</h6>
+                        <div class="subtitle">повторных заказов</div>
+                    </div>
+                </div>
+                <div class="development__item">
+                    <img src="img/development5.png" alt="">
+                    <div class="development__content">
+                        <h6>27%</h6>
+                        <div class="subtitle">клиентов стали постоянными</div>
+                    </div>
+                </div>
+                <div class="development__item">
+                    <img src="img/development6.png" alt="">
+                    <div class="development__content">
+                        <h6>88%</h6>
+                        <div class="subtitle">Заказов после тестового периода</div>
+                    </div>
+                </div>
+            </div>
+            <button class="but1">Заказать перевод</button>
+        </div>
+        <div class="order">
+            <div class="directory__title">
+                <h2><span>88% клиентов</span> заказавших у нас бесплатный тестовый перевод, стали нашими клиентами</h2>
+                <p class="subtitle">Если есть какие-либо сомнения, давайте мы их развеем! Мы можем перевести отрывок вашего текста бесплатно!</p>
+            </div>
+            <form action="#" class="order__form">
+                <div class="order__data">
+                    <h6>Имя</h6>
+                    <h6>Номер</h6>
+                    <input class="order__input" required  placeholder="Введите имя" type="text">
+                    <input class="order__input" required placeholder="Введите номер" type="text">
+                    <div class="file">
+                        <img src="img/Vector.png" alt="">
+                        <label for="myfile" class="chous">Прекрепить документ</label>
+                        <input type="file" class="my" id="myfile" name="myfile" multiple="multiple"/>
+                    </div>
+                </div>
+                <button class="but1">Заказать тест</button>
+            </form>
+        </div>
+        <div class="client">
+            <div class="directory__title">
+                <h2><span>Наши клиенты</span> нами довольны</h2>
+            </div>
+            <div class="client__list">
+                <div class="client__item"><img src="img/clientIMG.png" alt=""></div>
+                <div class="client__item"><img src="img/clientIMG.png" alt=""></div>
+                <div class="client__item"><img src="img/clientIMG.png" alt=""></div>
+                <div class="client__item"><img src="img/clientIMG.png" alt=""></div>
+                <div class="client__item"><img src="img/clientIMG.png" alt=""></div>
+            </div>
+        </div>
+        <div class="stages">
+            <div class="directory__title">
+                <h2><span>Наши клиенты</span> нами довольны</h2>
+            </div>
+            <div class="stages__list">
+                <div class="stages__item">
+                    <div class="stages__number1"><span>1</span> шаг</div>
+                    <div class="stages__content1">
+                        <img src="img/stage1.png" alt="" class="stages__icon">
+                        <h6 class="stages__item-title">Вам нужно:</h6>
+                        <div class="stages1__button">
+                            <a href="#cal"><button class="but2 button">Рассчитать стоимость перевода</button></a>
+                            <button class="but2 button">Оставить заказ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="stages__item">
+                    <div class="stages__number2"><span>2</span> шаг</div>
+                    <div class="stages__content2">
+                        <img src="img/stage2.png" alt="" class="stages__icon">
+                        <h6 class="stages__item-title">Мы проверяем ваш текст на перевод, согласовываем стоимость и сроки</h6>
+                    </div>
+                </div>
+                <div class="stages__item">
+                    <div class="stages__number3"><span>3</span> шаг</div>
+                    <div class="stages__content3">
+                        <img src="img/stage3.png" alt="" class="stages__icon">
+                        <h6 class="stages__item-title">Мы проверяем ваш текст на перевод, согласовываем стоимость и сроки</h6>
+                    </div>
+                </div>
+                <div class="stages__item">
+                    <div class="stages__number4"><span>4</span> шаг</div>
+                    <div class="stages__content4">
+                        <img src="img/stage4.png" alt="" class="stages__icon">
+                        <h6 class="stages__item-title">Выполнение перевода и обработки разными людьми:</h6>
+                        <div class="stages__item4-list">
+                            <div class="item4__list">
+                                <img src="img/st-icon1.png" alt="">
+                                <h5>Переводчик</h5>
+                            </div>
+                            <div class="item4__list">
+                                <img src="img/st-icon2.png" alt="">
+                                <h5>Корректор</h5>
+                            </div>
+                            <div class="item4__list">
+                                <img src="img/ST-ICON3.png" alt="">
+                                <h5>Отраслевый редактор</h5>
+                            </div>
+                            <div class="item4__list">
+                                <img src="img/ST-ICON4.png" alt="">
+                                <h5>Носитель языка</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stages__item">
+                    <div class="stages__number5"><span>5</span> шаг</div>
+                    <div class="stages__content5">
+                        <img src="img/stage5.png" alt="" class="stages__icon">
+                        <h6 class="stages__item-title">Мы проверяем ваш текст на перевод, согласовываем стоимость и сроки</h6>
+                    </div>
+                </div>
+        <div class="skills">
+            <div class="directory__title">
+                <h2>У нас более <span>500 довольных клиентов</span> по различным специализациям</h2>
+            </div>
+            <div class="skill__list">
+                <div class="skill__item">
+                    <img src="img/skill1.png" alt="">
+                    <p>Энергетика и машиностроение</p>
+                </div>
+                <div class="skill__item">
+                    <img src="img/skill2.png" alt="">
+                    <p>Банки и страховые компании</p>
+                </div>
+                <div class="skill__item">
+                    <img src="img/skill3.png" alt="">
+                    <p>IT компании</p>
+                </div>
+                <div class="skill__item">
+                    <img src="img/skill4.png" alt="">
+                    <p>Транспорт и логистика</p>
+                </div>
+                <div class="skill__item">
+                    <img src="img/skill5.png" alt="">
+                    <p>Производство</p>
+                </div>
+                <div class="skill__item">
+                    <img src="img/skill6.png" alt="">
+                    <p>Частные лица</p>
+                </div>
+                <div class="skill__item">
+                    <img src="img/skill7.png" alt="">
+                    <p>Маркетинговые и комуникационные агенства</p>
+                </div>
+                <div class="skill__item">
+                    <img src="img/skill8.png" alt="">
+                    <p>Кондитерские компании</p>
+                </div>
+                <div class="skill__item">
+                    <img src="img/skill9.png" alt="">
+                    <p>Фармпроизводители и медицинские уреждения</p>
+                </div>
+                <div class="skill__item">
+                    <img src="img/skill10.png" alt="">
+                    <p>Государственные структуры и т. п.</p>
+                </div>
+            </div>
+        </div>
+        <div class="partners">
+            <div class="directory__title">
+                <h2><span>На постоянной основе</span> работаем с такими компаниями как:</h2>
+            </div>
+            <div class="partners__list">
+                <div class="partners__item"><img src="img/partner1.png" alt="" ></div>
+                <div class="partners__item"><img src="img/partner2.png" alt="" ></div>
+                <div class="partners__item"><img src="img/partner3.png" alt="" ></div>
+                <div class="partners__item"><img src="img/partner4.png" alt="" ></div>
+                <div class="partners__item"><img src="img/partner5.png" alt="" ></div>
+                <div class="partners__item"><img src="img/partner6.png" alt="" ></div>
+                <div class="partners__item"><img src="img/partner7.png" alt="" ></div>
+                <div class="partners__item"><img src="img/partner8.png" alt="" ></div>
+                <div class="partners__item"><img src="img/partner9.png" alt="" ></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer__item">
+                <div class="footer__logo">
+                    <img src="img/logo2.png" alt="">
+                </div>
+                <div class="telephone">
+                    <div class="telephone__UA"><img src="img/UA.png" alt="">+ 38 044 537-02-22</div>
+                    <div class="telephone__RU"><img src="img/RU.png" alt="">+ 7 (499) 350-06-40</div>
+                </div>
+                <div class="footer__adress">
+                    <div class="footer__adress-item">
+                        <div class="footer__point"><img src="img/footer__point.png" alt="" class="footer__point"></div>
+                        <div class="footer__text">
+                            <h6 class="footer__title">Главный офис в Украине:</h6>
+                            <p>г. Одесса, пр. А. Глушка, 29, БЦ "Элемент”</p>
+                            
+                        </div>
+                        <img src="img/footer__map1.png" alt="" class="footer__maps">
+                    </div>
+                    <div class="footer__adress-item">
+                        <div class="footer__point"><img src="img/footer__point.png" alt="" class="footer__point"></div>
+                        <div class="footer__text">
+                            <h6 class="footer__title">Главный офис в РФ:</h6>
+                            <p>г. Москва, Чермянский пр-д, 7, БЦ “На Широкой”</p>
+                           
+                        </div>
+                        <img src="img/footer__map2.png" alt="" class="footer__maps">
+                    </div>
+                </div>
+                <p class="footer__email">info@pervseyaz.ru</p>
+                <div class="messenger">
+                    <a href="" class="mess"><img src="img/telegram.png" alt=""></a>
+                    <a href="" class="mess"><img src="img/viber.png" alt=""></a>
+                    <a href="" class="mess"><img src="img/wat.png" alt=""></a>
+                </div>
+            </div>
+            <div class="footer__item">
+                <div class="footer__menu-title">Меню</div>
+                <div class="footer__menu">
+                    <a href="" class="footer__list-menu">Главная</a>
+                    <a href="" class="footer__list-menu">Расчет стоимости</a>
+                    <a href="" class="footer__list-menu">О компании</a>
+                    <a href="" class="footer__list-menu">Услуги</a>
+                    <a href="" class="footer__list-menu">Акции</a>
+                    <a href="" class="footer__list-menu">Блог</a>
+                    <a href="" class="footer__list-menu">Вопрос и ответы</a>
+                    <a href="" class="footer__list-menu">Контакты</a>
+                </div>
+            </div>
+            <div class="footer__item">
+                <div class="footer__menu-title">Услуги</div>
+                <div class="footer__menu">
+                    <a href="" class="footer__list-menu">Юридический перевод</a>
+                    <a href="" class="footer__list-menu">Экономический перевод</a>
+                    <a href="" class="footer__list-menu">Технический перевод</a>
+                    <a href="" class="footer__list-menu">Медицинский перевод</a>
+                    <a href="" class="footer__list-menu">Литературный перевод</a>
+                    <a href="" class="footer__list-menu">Финансовый перевод</a>
+                    <a href="" class="footer__list-menu">Научный перевод</a>
+                    <a href="" class="footer__list-menu">Перевод - локализация сайта</a>
+                    <a href="" class="footer__list-menu">Перевод видео</a>
+                    <a href="" class="footer__list-menu">Перевод аудио</a>
+                </div>
+            </div>
+            <div class="footer__item">
+                <div class="footer__menu-title">Услуги</div>
+                <div class="footer__menu">
+                    <a href="" class="footer__list-menu">Политика конфиденциальности</a>
+                    <a href="" class="footer__list-menu">Отзывы</a>
+                </div>
+                <div class="footer__menu-title">Услуги</div>
+                <div class="footer__list-bank">
+                    <div class="footer__link-bank"><img src="img/bank1.png" alt=""></div>
+                    <div class="footer__link-bank"><img src="img/bank2.png" alt=""></div>
+                    <div class="footer__link-bank"><img src="img/bank3.png" alt=""></div>
+                    <div class="footer__link-bank"><img src="img/bank4.png" alt=""></div>
+                    <div class="footer__link-bank"><img src="img/bank5.png" alt=""></div>
+                    <div class="footer__link-bank"><img src="img/bank6.png" alt=""></div>
+                    <div class="footer__link-bank"><img src="img/bank7.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>$('.my').change(function() {
+        if ($(this).val() != '') $(this).prev().text('Выбрано файлов: ' + $(this)[0].files.length);
+        else $(this).prev().text('Выберите файлы');
+    });</script>
+    <script src="select1.js"></script>
+</body>
+</html>
